@@ -34,7 +34,21 @@ chmod +x run.sh
 ```
 
 ## How it works
-![Data Flow Architecture](docs/data-flow.png)
+```mermaid
+graph TD
+    A[Fetch: ThreadPool Scrapers] -->|JSON/RSS Data| B(Dedupe: Jaccard Similarity)
+    B --> C{Score: Hype Penalty & Impact}
+    C -->|High Signal| D[Classify: Column Routing]
+    C -->|Low Signal / PR Fluff| X((Discard))
+    D --> E[Render: Vanilla JS / HTML]
+    
+    style A fill:#f9f5f0,stroke:#d4c4b7,stroke-width:2px,color:#141414
+    style B fill:#f9f5f0,stroke:#d4c4b7,stroke-width:2px,color:#141414
+    style C fill:#f9f5f0,stroke:#d4c4b7,stroke-width:2px,color:#141414
+    style D fill:#f9f5f0,stroke:#d4c4b7,stroke-width:2px,color:#141414
+    style E fill:#f9f5f0,stroke:#d4c4b7,stroke-width:2px,color:#141414
+    style X fill:#ffcccc,stroke:#cc0000,stroke-width:2px,color:#141414
+```
 
 The pipeline is split into five distinct stages:
 1. **Fetch**: A `ThreadPoolExecutor` dispatches concurrent workers to scrape 25+ RSS feeds, subreddits, and curated social profiles. 
