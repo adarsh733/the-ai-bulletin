@@ -11,7 +11,7 @@ The AI Bulletin is a high-signal news aggregator designed like a premium print n
 ## Quick start (see it in 10 seconds)
 You can view the fully functioning dashboard instantly—no API keys or database setup required.
 ```bash
-git clone https://github.com/yourusername/the-ai-bulletin.git
+git clone https://github.com/adarsh733/the-ai-bulletin.git
 cd the-ai-bulletin
 open index.html
 ```
