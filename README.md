@@ -1,9 +1,10 @@
 # 📰 The AI Bulletin
 > An automated, opinionated AI newspaper. Reads 25+ sources, filters the hype, prints what matters.
 
-![Front Page Screenshot](docs/screenshots/front-page.png)
+<img width="1529" height="1079" alt="image" src="https://github.com/user-attachments/assets/4bd440bf-9ef3-4d87-8032-3ba990c69144" />
 
-[🔗 Live demo](#) · [📐 Architecture](docs/architecture.md) · [💼 LinkedIn writeup](#)
+
+[🔗 Live demo](#) · [📐 Architecture](docs/architecture.md) 
 
 ## What it does
 The AI Bulletin is a high-signal news aggregator designed like a premium print newspaper. Instead of showing you a noisy, chronological feed of every press release, it scrapes dozens of technical and community sources in parallel, mathematically penalizes clickbait headlines, and groups stories into an editorial layout. It separates engineering updates and research papers from PR announcements so you can quickly see what is actually being built.
